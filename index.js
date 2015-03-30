@@ -5,6 +5,7 @@ var fs = require('fs'),
     program = require('commander'),
     readline = require('readline'),
     exec = require('child_process').exec,
+    os = require('os'),
     rl;
 
 var pathReg = /^(\w:(\\|\/)|\/).*/,
