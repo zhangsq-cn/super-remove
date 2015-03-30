@@ -11,8 +11,8 @@ var fs = require('fs'),
 var pathReg = /^(\w:(\\|\/)|\/).*/,
     cliCommand = os.platform() === 'win32' ? 'rd /s /q' : 'rm -rf';
 
-        program.version('1.0.0')
-    .usage('<文件或目录>')
+program.version('1.0.0')
+    .usage('[--confirm] <file or path>')
     .option('-c --confirm', 'without confirmation')
     .parse(process.argv);
 
@@ -27,16 +27,20 @@ if (program.args[0]) {
     }
     fs.exists(realPath, function (exists) {
         if (exists) {
-            rl = readline.createInterface({
-                input : process.stdin,
-                output : process.stdout
-            });
-            rl.question('Confirm that you want to delete "' + realPath + '"? (y/N)', function (answer) {
-                if (answer.toUpperCase() === 'Y') {
-                    removeFileOrDirector(realPath);
-                }
-                rl.close();
-            });
+            if (program.confirm) {
+                removeFileOrDirector(realPath);
+            } else {
+                rl = readline.createInterface({
+                    input: process.stdin,
+                    output: process.stdout
+                });
+                rl.question('Confirm that you want to delete "' + realPath + '"? (y/N)', function (answer) {
+                    if (answer.toUpperCase() === 'Y') {
+                        removeFileOrDirector(realPath);
+                    }
+                    rl.close();
+                });
+            }
         } else {
             console.log('Error: File or directory does not exists');
         }
