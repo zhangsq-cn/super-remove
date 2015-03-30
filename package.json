@@ -1,6 +1,6 @@
 {
   "name": "super-remove",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "解决windows下目录过长导致无法删除文件问题的命令行程序",
   "main": "index.js",
   "bin" : {
