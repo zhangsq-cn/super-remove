@@ -1,20 +1,20 @@
 # super-remove
-解决windows下目录过长导致无法删除文件问题的命令行程序
+Solve the long lead windows directory problem can not delete files on the command line program
 
-## 安装
+## Setup
 ```
 npm install super-remove -g
 ```
 
-## 使用
-命令行执行
+## Use
+Command line execution
 
-获取帮助
+Getting Help
 ```
 srm --help
 ```
 
-删除文件或目录
+To delete a file or directory
 ```
 srm path/to/target
 ```

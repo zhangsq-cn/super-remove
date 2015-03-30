@@ -1,7 +1,7 @@
 {
   "name": "super-remove",
-  "version": "1.1.0",
-  "description": "解决windows下目录过长导致无法删除文件问题的命令行程序",
+  "version": "1.1.1",
+  "description": "Solve the long lead windows directory problem can not delete files on the command line program",
   "main": "sremove.js",
   "bin" : {
     "sremove" : "sremove.js",
