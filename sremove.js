@@ -11,7 +11,7 @@ var fs = require('fs'),
 var pathReg = /^(\w:(\\|\/)|\/).*/,
     cliCommand = os.platform() === 'win32' ? 'rd /s /q' : 'rm -rf';
 
-program.version('1.0.0')
+program.version('1.1.2')
     .usage('[--confirm] <file or path>')
     .option('-c --confirm', 'without confirmation')
     .parse(process.argv);

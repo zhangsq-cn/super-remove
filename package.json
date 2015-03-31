@@ -1,6 +1,6 @@
 {
   "name": "super-remove",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Solve the long lead windows directory problem can not delete files on the command line program",
   "main": "sremove.js",
   "bin" : {
